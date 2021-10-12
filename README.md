@@ -5,5 +5,6 @@ Collects genome asssemblies from NCBI that meet VGP contig and scaffold N50 mini
 To run it:
 
 vertebrates="Cladistia,Aves,Mammalia,Reptilia,Amphibia,Coelacanthimorpha,Dipnoi,Actinopteri,Chondrichthyes,Cyclostomata"
+
 sh _fetch_NCBI.sh $vertebrates
 
