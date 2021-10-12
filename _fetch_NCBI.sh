@@ -31,4 +31,8 @@ done
 
 cat filtered/*_filtered.tsv > final.tsv
 
-python3 ${script_path}/summary.py final.tsv
+echo "tag vgp assemblies"
+sh ${script_path}/flag_vgp.sh final.tsv > vgp_matches
+python3 ${script_path}/tag_asm.py final.tsv vgp_matches > final_tagged.tsv
+
+python3 ${script_path}/summary.py final_tagged.tsv
