@@ -35,6 +35,6 @@ for taxId in filtered.keys():
 		j=filtered[taxId][jj]
 	filtered2.append(j)
 
-cols=["AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","contig_n50","scaffold_n50"]
+cols=["AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","BioprojectId","contig_n50","scaffold_n50"]
 for i in filtered2:
 	print("\t".join([i[x] for x in cols]))

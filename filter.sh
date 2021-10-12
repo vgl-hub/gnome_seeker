@@ -15,6 +15,8 @@ cat $input | xtract -pattern DocumentSummary \
 -block GB_BioProjects \
     -pfx "BioprojectAccn:" \
     -element BioprojectAccn \
+     -pfx "BioprojectId:" \
+    -element BioprojectId \
 -block Stat \
     -if Stat@category -equals scaffold_n50 \
     -or Stat@category -equals contig_n50 \
