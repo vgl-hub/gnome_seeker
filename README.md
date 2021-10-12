@@ -11,3 +11,6 @@ sh _fetch_NCBI.sh $vertebrates
 requirements:
 python3
 NCBI edirect (https://www.ncbi.nlm.nih.gov/books/NBK179288/)
+
+final output: final.tsv
+columns= "AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","contig_n50","scaffold_n50"
