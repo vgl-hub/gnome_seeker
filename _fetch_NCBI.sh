@@ -24,9 +24,11 @@ fi
 sh ${script_path}/filter.sh xml/${taxon}.xml > tsv/${taxon}.tsv
 echo "\t\t# of chromosome-scaffold scale assemblies: "$(cat tsv/${taxon}.tsv | wc -l)
 
-python ${script_path}/format.py tsv/${taxon}.tsv > filtered/${taxon}_filtered.tsv
+python3 ${script_path}/format.py tsv/${taxon}.tsv > filtered/${taxon}_filtered.tsv
 echo "\t\t# of assemblies with VGP contiguity standards: "$(cat filtered/${taxon}_filtered.tsv | wc -l)
 
 done
 
 cat filtered/*_filtered.tsv > final.tsv
+
+python3 ${script_path}/summary.py final.tsv
