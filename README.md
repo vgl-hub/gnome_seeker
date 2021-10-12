@@ -1,2 +1,2 @@
-# VGP_seeker
+# gnome_seeker
  
