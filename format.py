@@ -1,6 +1,6 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3.9
 
-import sys,glob
+import sys,os
 
 contigN50_min=1000000
 scaffoldN50_min=10000000
@@ -18,6 +18,7 @@ for line in data:
 	res={}
 	for item in items:
 		res[item.split(":")[0]]=item.split(":")[1]
+	res["Taxon"]=os.path.basename(fileName).split(".")[0]
 	if float(res["contig_n50"])>=contigN50_min and float(res["scaffold_n50"])>=scaffoldN50_min:
 		table.append(res)
 
@@ -35,6 +36,6 @@ for taxId in filtered.keys():
 		j=filtered[taxId][jj]
 	filtered2.append(j)
 
-cols=["AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","BioprojectId","contig_n50","scaffold_n50"]
+cols=["AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","BioprojectId","contig_n50","scaffold_n50","Taxon"]
 for i in filtered2:
 	print("\t".join([i[x] for x in cols]))
