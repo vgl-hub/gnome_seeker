@@ -8,3 +8,6 @@ vertebrates="Cladistia,Aves,Mammalia,Reptilia,Amphibia,Coelacanthimorpha,Dipnoi,
 
 sh _fetch_NCBI.sh $vertebrates
 
+requirements:
+python3
+NCBI edirect (https://www.ncbi.nlm.nih.gov/books/NBK179288/)
