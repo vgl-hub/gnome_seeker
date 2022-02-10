@@ -19,4 +19,4 @@ Also now includes a small script to gather tsxonomic information from https://go
 
 Takes a tab delimited file with header with two columns: scientific_name, common_name.
 
-python goat.py <input file>
+python goat.py input_file
