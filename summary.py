@@ -11,7 +11,7 @@ f.close()
 submitters={}
 for line in data[1:]:
 	items=line.split("\t")
-	submitters.setdefault(items[12],[]).append(items[0])
+	submitters.setdefault(items[14],[]).append(items[0])
 
 counts={}
 for name in submitters.keys():
