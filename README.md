@@ -16,5 +16,7 @@ final output: final.tsv
 columns= "AssemblyAccession","AssemblyName","Organism","Taxid","assembly-status","SubmitterOrganization","representative-status","BioprojectAccn","BioprojectId","contig_n50","scaffold_n50","VGP tag"
 
 Also now includes a small script to gather tsxonomic information from https://goat.genomehubs.org.
-Takes a tab delimited fil with header with two columns: scientific_name, common_name.
+
+Takes a tab delimited file with header with two columns: scientific_name, common_name.
+
 python goat.py <input file>
